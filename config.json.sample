@@ -1,0 +1,10 @@
+{
+  "nick": "marimo",
+  "server": "chat.freenode.net",
+  "options": {
+    "userName": "marimo",
+    "realName": "marimo",
+    "port": 6667,
+    "channels": ["#your-channel-names-here"]
+  }
+}

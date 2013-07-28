@@ -1,0 +1,14 @@
+{
+  "author": "yusukezzz",
+  "name": "marimo",
+  "description": "irc bot, provide rental home information",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.10.13"
+  },
+  "dependencies": {
+      "irc": ">= 0.3.5"
+    , "request": ">= 2.22.0"
+    , "cheerio": ">= 0.12.0"
+  }
+}
