@@ -6,8 +6,7 @@ exports.reply = function(client, nick, to, dom)
   items.push(dom('.price').text());
   items.push(dom('.upkeep').text());
   items.push(dom('.reward').text());
-  var tmp = dom('.deposit').text().split('/');
-  items.push(tmp[0]);
+  items.push(dom('.deposit').text().split('/')[0]);
   items.push(dom('.layout').text());
   items.push(dom('.area').text());
   items.push(dom('.type').text().replace('賃貸', ''));
