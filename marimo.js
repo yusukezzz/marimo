@@ -47,8 +47,7 @@ Marimo.prototype.loadRules = function()
 
 Marimo.prototype.eventMessage = function(marimo, nick, to, text)
 {
-  for (var i=0; i<marimo.rules.length; i++){
-    var rule = marimo.rules[i];
+  marimo.rules.forEach(function(rule) {
     var result = text.match(rule.replyPattern);
     if (result) {
       console.log(rule.replyPattern);
@@ -56,7 +55,7 @@ Marimo.prototype.eventMessage = function(marimo, nick, to, text)
         rule.reply.call(null, marimo.client, nick, to, dom);
       });
     }
-  }
+  });
 }
 
 Marimo.prototype.fetchDocument = function(page_url, callback)
@@ -67,7 +66,7 @@ Marimo.prototype.fetchDocument = function(page_url, callback)
       var dom = null;
       if (err) {
         console.log(err)
-        return null;
+        return;
       }
       dom = cheerio.load(body, {lowerCaseTags:true, xmlMode:true});
       if (callback) {
